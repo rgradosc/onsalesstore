@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <AssemblyName>OnSalesStore.ECommerce.Application.Interfaces</AssemblyName>
+    <RootNamespace>OnSalesStore.ECommerce.Application.Interfaces</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnSalesStore.ECommerce.Application.DTO\OnSalesStore.ECommerce.Application.DTO.csproj" />
+    <ProjectReference Include="..\OnSalesStore.ECommerce.Domain\OnSalesStore.ECommerce.Domain.csproj" />
+    <ProjectReference Include="..\OnSalesStore.ECommerce.Transversal.Common\OnSalesStore.ECommerce.Transversal.Common.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,50 @@
+@startuml architecture
+skin rose
+
+package "OnSalesStore.ECommerce.Application.DTO"
+package "OnSalesStore.ECommerce.Application.Interfaces"
+package "OnSalesStore.ECommerce.Application.UseCases"
+package "OnSalesStore.ECommerce.Domain"
+package "OnSalesStore.ECommerce.Infrastructure"
+package "OnSalesStore.ECommerce.Persistence"
+package "OnSalesStore.ECommerce.Transversal.Common"
+package "OnSalesStore.ECommerce.Services.WebAPI"
+package AutoMapper #ffffff
+package MediatR #ffffff
+package "FluentValidation" #ffffff
+package "MassTransit.\nRabbitMQ" #ffffff
+package "Sendgrid" #ffffff
+package "Bogus" #ffffff
+package "Dapper" #ffffff
+package "Asp.Versioning.\nMvc.ApiExplorer" #ffffff
+package "AspNetCore.\nHealthChecks.Redis" #ffffff
+package "Microsoft.AspNetCore.\nAuthentication.JwtBearer" #ffffff
+package "Microsoft.\nEntityFrameworkCore.SqlServer" #ffffff
+
+"OnSalesStore.ECommerce.Application.Interfaces" .down.> "OnSalesStore.ECommerce.Application.DTO"
+"OnSalesStore.ECommerce.Application.Interfaces" .down.> "OnSalesStore.ECommerce.Domain"
+"OnSalesStore.ECommerce.Application.Interfaces" .down.> "OnSalesStore.ECommerce.Transversal.Common"
+"OnSalesStore.ECommerce.Application.UseCases" .down.> "OnSalesStore.ECommerce.Application.DTO"
+"OnSalesStore.ECommerce.Application.UseCases" .down.> "OnSalesStore.ECommerce.Application.Interfaces"
+"OnSalesStore.ECommerce.Application.UseCases" .down.>"OnSalesStore.ECommerce.Transversal.Common"
+"OnSalesStore.ECommerce.Application.UseCases" .down.> AutoMapper
+"OnSalesStore.ECommerce.Application.UseCases" .down.> MediatR
+"OnSalesStore.ECommerce.Application.UseCases" .down.> "FluentValidation"
+"OnSalesStore.ECommerce.Infrastructure" .down.> "OnSalesStore.ECommerce.Application.Interfaces"
+"OnSalesStore.ECommerce.Infrastructure" .down.> "MassTransit.\nRabbitMQ"
+"OnSalesStore.ECommerce.Infrastructure" .down.> "Sendgrid"
+"OnSalesStore.ECommerce.Persistence" .down.> "OnSalesStore.ECommerce.Application.Interfaces"
+"OnSalesStore.ECommerce.Persistence" .down.> "OnSalesStore.ECommerce.Transversal.Common"
+"OnSalesStore.ECommerce.Persistence" .down.> "Bogus"
+"OnSalesStore.ECommerce.Persistence" .down.> "Dapper"
+"OnSalesStore.ECommerce.Persistence" .down.> "Microsoft.\nEntityFrameworkCore.SqlServer"
+"OnSalesStore.ECommerce.Services.WebAPI" .down.> "OnSalesStore.ECommerce.Application.DTO"
+"OnSalesStore.ECommerce.Services.WebAPI" .down.> "OnSalesStore.ECommerce.Application.Interfaces"
+"OnSalesStore.ECommerce.Services.WebAPI" .down.> "OnSalesStore.ECommerce.Application.UseCases"
+"OnSalesStore.ECommerce.Services.WebAPI" .down.> "OnSalesStore.ECommerce.Infrastructure"
+"OnSalesStore.ECommerce.Services.WebAPI" .down.> "OnSalesStore.ECommerce.Persistence"
+"OnSalesStore.ECommerce.Services.WebAPI" .down.> "Asp.Versioning.\nMvc.ApiExplorer"
+"OnSalesStore.ECommerce.Services.WebAPI" .down.> "AspNetCore.\nHealthChecks.Redis"
+"OnSalesStore.ECommerce.Services.WebAPI" .down.> "Microsoft.AspNetCore.\nAuthentication.JwtBearer"
+
+@enduml

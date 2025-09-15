@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <AssemblyName>OnSalesStore.ECommerce.Application.UseCases</AssemblyName>
+    <RootNamespace>OnSalesStore.ECommerce.Application.UseCases</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="15.0.1" />
+    <PackageReference Include="FluentValidation" Version="12.0.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
+    <PackageReference Include="MediatR" Version="13.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="9.0.9" />
+    <PackageReference Include="System.Text.Json" Version="9.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OnSalesStore.ECommerce.Application.DTO\OnSalesStore.ECommerce.Application.DTO.csproj" />
+    <ProjectReference Include="..\OnSalesStore.ECommerce.Application.Interfaces\OnSalesStore.ECommerce.Application.Interfaces.csproj" />
+    <ProjectReference Include="..\OnSalesStore.ECommerce.Transversal.Common\OnSalesStore.ECommerce.Transversal.Common.csproj" />
+  </ItemGroup>
+
+</Project>

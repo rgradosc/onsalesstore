@@ -1,0 +1,9 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <AssemblyName>OnSalesStore.ECommerce.Transversal.Common</AssemblyName>
+    <RootNamespace>OnSalesStore.ECommerce.Transversal.Common</RootNamespace>
+  </PropertyGroup>
+
+</Project>
